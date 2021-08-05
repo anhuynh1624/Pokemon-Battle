@@ -1,0 +1,23 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": false
+        },
+        {
+            "path": "PokemonPackage",
+            "package": "PokemonBattle",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": true
+        }
+    ],
+    "name": "PokemonBattle",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "PokemonBattle": "0Ho5e000000PBkyCAG",
+        "PokemonBattle@0.1.0-1": "04t5e000000GYXUAA4"
+    }
+}
