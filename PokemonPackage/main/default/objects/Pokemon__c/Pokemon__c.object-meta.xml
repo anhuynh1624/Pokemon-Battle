@@ -155,9 +155,10 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Pokemon</label>
     <nameField>
-        <label>Pokemon Name</label>
+        <displayFormat>P-{000000}</displayFormat>
+        <label>ID</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Pokemons</pluralLabel>
     <searchLayouts/>

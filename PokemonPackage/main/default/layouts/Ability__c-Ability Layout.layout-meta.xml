@@ -7,7 +7,7 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
@@ -25,6 +25,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Damage__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Ability_Name__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>

@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Damage__c</fullName>
     <externalId>false</externalId>
-    <formula>Base_Damage__c + (Pokemon__r.Level__c*2)</formula>
+    <formula>Base_Damage__c + (Base_Damage__c *Pokemon__r.Level__c*0.7)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Damage</label>
     <precision>18</precision>

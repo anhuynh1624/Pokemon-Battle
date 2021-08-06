@@ -155,8 +155,9 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Ability</label>
     <nameField>
-        <label>Ability Name</label>
-        <type>Text</type>
+        <displayFormat>A-{000000}</displayFormat>
+        <label>ID</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Abilities</pluralLabel>
     <searchLayouts/>
