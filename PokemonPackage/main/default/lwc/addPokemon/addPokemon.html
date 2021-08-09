@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <template if:true={showAdding}>
+            <div>
+                <h6>Type the pokemon name that you need to add to the game!</h6>
+                <label for="inputName">Name:</label>
+                <input  type="text" class="inputName" id="inputName" placeholder="pikachu" value={poName} /> <br/>
+                <input type="submit" onclick={addNewPoke} value="Submit" />
+            </div>
+            <template if:true={isPokemonNotExist}>
+                <h6>The pokemon you give is not existed.</h6>
+            </template>
+        </template> 
+        <template if:false={showAdding}>
+            <h6>Your pokemon has been added!</h6>
+        </template>
+
+        <template if:true={isError}>
+            <h6>Error!!! {error}</h6>
+        </template>
+    </lightning-card>
+</template>

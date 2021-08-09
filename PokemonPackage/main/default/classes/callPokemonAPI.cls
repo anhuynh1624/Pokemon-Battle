@@ -1,6 +1,8 @@
 public with sharing class callPokemonAPI {
    
+    @AuraEnabled
     public static Boolean callPoke(String pokeName){
+        
             Http http = new Http();
             HttpRequest request = new HttpRequest();
             request.setEndpoint('https://pokeapi.co/api/v2/pokemon/' + pokeName);

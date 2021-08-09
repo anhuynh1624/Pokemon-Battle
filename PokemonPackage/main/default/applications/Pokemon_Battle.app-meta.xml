@@ -10,6 +10,7 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Pokemon Battle</label>
     <navType>Standard</navType>
+    <tabs>Adding_New_Pokemon</tabs>
     <tabs>Pokemon__c</tabs>
     <tabs>Ability__c</tabs>
     <uiType>Lightning</uiType>
