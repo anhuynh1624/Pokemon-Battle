@@ -1,0 +1,23 @@
+<template>
+    
+    <lightning-input type="search"
+	onchange={handleSearchTermChange}
+	variant="label-hidden"
+	class="slds-var-m-bottom_small"
+	label="Search"
+	placeholder="Search for pokemon"
+	value={searchTerm}>
+    </lightning-input>
+
+    <template for:each={pokemons.data} for:item="mypokemon">
+        <lightning-layout-item key={mypokemon.Id}>
+	        <c-pokemon pokemon= {mypokemon}></c-pokemon>
+        </lightning-layout-item>
+    </template>
+
+    <template if:true={pokemons.error}>
+        <div class="slds-text-color_error">
+            An error occurred while loading the pokemon list
+        </div>
+    </template>
+</template>

@@ -29,12 +29,17 @@ public with sharing class callPokemonAPI {
                 myPoke.Base_HP__c = myStats[0];
                 myPoke.Base_Defense__c = myStats[2];
                 
-                
+                //INSERT TYPE
                 List<Object> types = (List<Object>)respMap.get('types');
                 Map<String,Object> mytype = (Map<String,Object>) types[0];
                 Map<String,Object> mytype2 = (Map<String,Object>) mytype.get('type');
                 myPoke.Type__c = String.valueOf(mytype2.get('name'));
-             
+
+                //INSERT FRONT AND BACK IMAGE
+                Map<String,Object> sprites = ( Map<String,Object>) respMap.get('sprites');
+                myPoke.Pokemon_Back__c = String.valueOf(sprites.get('back_default'));
+                myPoke.Pokemon_Front__c = String.valueOf(sprites.get('front_default'));
+                
                 insert myPoke;
                 
                 

@@ -10,9 +10,11 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Pokemon Battle</label>
     <navType>Standard</navType>
+    <tabs>My_Pokemons</tabs>
     <tabs>Adding_New_Pokemon</tabs>
     <tabs>Pokemon__c</tabs>
     <tabs>Ability__c</tabs>
+    <tabs>Team__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Pokemon_Battle_UtilityBar</utilityBar>
 </CustomApplication>
