@@ -15,6 +15,8 @@ public with sharing class callPokemonAPI {
                 
                 List<Object> abilities = (List<Object>) respMap.get('abilities');
                 List<Object> stats = (List<Object>)respMap.get('stats');
+
+                
                 
                 //GETTING STATS
                 List<Integer> myStats = new List<Integer>();
@@ -26,6 +28,13 @@ public with sharing class callPokemonAPI {
                 }
                 myPoke.Base_HP__c = myStats[0];
                 myPoke.Base_Defense__c = myStats[2];
+                
+                
+                List<Object> types = (List<Object>)respMap.get('types');
+                Map<String,Object> mytype = (Map<String,Object>) types[0];
+                Map<String,Object> mytype2 = (Map<String,Object>) mytype.get('type');
+                myPoke.Type__c = String.valueOf(mytype2.get('name'));
+             
                 insert myPoke;
                 
                 
