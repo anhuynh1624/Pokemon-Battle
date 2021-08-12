@@ -26,6 +26,14 @@
                 <behavior>Readonly</behavior>
                 <field>Team_Damage_Rating__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Queue__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Pokemon_Can_Be_Added__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

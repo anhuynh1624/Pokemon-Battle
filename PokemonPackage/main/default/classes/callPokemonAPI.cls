@@ -28,6 +28,7 @@ public with sharing class callPokemonAPI {
                 }
                 myPoke.Base_HP__c = myStats[0];
                 myPoke.Base_Defense__c = myStats[2];
+                myPoke.EXP__c = 0;
                 
                 //INSERT TYPE
                 List<Object> types = (List<Object>)respMap.get('types');

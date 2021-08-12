@@ -11,6 +11,7 @@
     <label>Pokemon Battle</label>
     <navType>Standard</navType>
     <tabs>My_Pokemons</tabs>
+    <tabs>Team_Managerment</tabs>
     <tabs>Adding_New_Pokemon</tabs>
     <tabs>Pokemon__c</tabs>
     <tabs>Ability__c</tabs>
