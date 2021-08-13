@@ -1,0 +1,14 @@
+<template>
+    <div class="body">
+        <template if:false={inQueue}>
+            <h1>Welcome to pokemon battle!</h1>
+            <input type="submit" onclick={findOpponent} value="Start Battle" />
+        </template>
+        <template if:true={inQueue}>
+            
+            <c-team-component myteam={opponentteam} ismyteam={falseValue} ></c-team-component>
+            <img src="https://comicvine1.cbsistatic.com/uploads/original/7/72524/5386373-6150833836-latest" />
+            <c-team-component myteam={mteam} ismyteam={trueValue} ></c-team-component>   
+        </template>
+    </div>
+</template>
