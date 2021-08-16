@@ -1,9 +1,16 @@
 <template>
     <div class="wholething">
         <div class="pokebox">
-            <div class="theimage">
-                <img src={pokemon.Pokemon_Front__c} />
-            </div>
+            <template if:false={isyourpokemon}>
+                <div class="theimage">
+                    <img src={pokemon.Pokemon_Front__c} />
+                </div>
+            </template>
+            <template if:true={isyourpokemon}>
+                <div class="theimage">
+                    <img src={pokemon.Pokemon_Back__c} />
+                </div>
+            </template>
             <div class="info">
                 <p class="name">Name: {pokemon.Pokemon_Name__c}</p>
                 <div class="insideinfo">
@@ -14,15 +21,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
-    <div class="abi">
-        <template if:true={isyourpokemon}>
-            <template for:each={myabilities.data} for:item="ability">
-                <lightning-layout-item key={ability.Id}>
-                    <lightning-button label={ability.Ability_Name__c} onclick={myclick} ></lightning-button>
-                </lightning-layout-item>
+        <div class="abi">
+            <template if:true={isyourpokemon}>
+                <template for:each={myabilities.data} for:item="ability">
+                    <lightning-layout-item key={ability.Id}>
+                        <lightning-button label={ability.Ability_Name__c} onclick={myclick} ></lightning-button>
+                    </lightning-layout-item>
+                </template>
             </template>
-        </template>
-    </div>
+        </div>  
+    </div> 
 </template>

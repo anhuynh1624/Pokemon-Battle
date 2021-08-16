@@ -1,18 +1,25 @@
 <template>
-    <template if:true={ismyteam}>
-        <p>Your Team: {myteam.Name}</p>
-        <template for:each={mypokemons.data} for:item="pokemon">
-            <lightning-layout-item key={pokemon.Id}>
-                <c-pokemon-component pokemon={pokemon} isyourpokemon={trueValue}></c-pokemon-component>
-            </lightning-layout-item>
+    <div class="wrapping">
+        <template if:true={ismyteam}>
+            <p class="teamname">Your Team: {myteam.Name}</p>
+            <div class="wholething">           
+                <template for:each={mypokemons.data} for:item="pokemon">
+                    <lightning-layout-item key={pokemon.Id}>
+                        <c-pokemon-component pokemon={pokemon} isyourpokemon={trueValue}></c-pokemon-component>
+                    </lightning-layout-item>
+                </template>
+            </div>
         </template>
-    </template>
-    <template if:false={ismyteam}>
-        <p>Opponent Team: {myteam.Name}</p>
-        <template for:each={mypokemons.data} for:item="pokemon">
-            <lightning-layout-item key={pokemon.Id}>
-                <c-pokemon-component pokemon={pokemon} isyourpokemon={falseValue}></c-pokemon-component>
-            </lightning-layout-item>
+        
+        <template if:false={ismyteam}>
+            <p class="teamname">Opponent Team: {myteam.Name}</p>
+            <div class="wholething">
+            <template for:each={mypokemons.data} for:item="pokemon">
+                <lightning-layout-item key={pokemon.Id}>
+                    <c-pokemon-component pokemon={pokemon} isyourpokemon={falseValue}></c-pokemon-component>
+                </lightning-layout-item>
+            </template>
+            </div>            
         </template>
-    </template>
+    </div>
 </template>
