@@ -1,0 +1,14 @@
+.wholething{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin-right: 10px;
+    border: 5px solid #099e97;
+    width: 300px;
+    height: 150px;
+}
+
+.theimage{
+    float: left;
+    width: 30%;
+    margin-top: 6%;
+}

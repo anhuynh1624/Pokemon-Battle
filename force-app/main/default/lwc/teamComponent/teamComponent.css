@@ -1,0 +1,21 @@
+.wholething{
+    height: 100%;
+    width: 100%; 
+    display: flex; 
+    margin: 0 auto;
+}
+
+.wrapping{
+    margin: 0 auto;
+}
+
+.teamname{
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin-bottom: 2px;
+    border: 5px solid #099e97;
+    font-size: 150%;
+    width: 920px;
+    font-weight: bold;
+    text-align: center;
+}
