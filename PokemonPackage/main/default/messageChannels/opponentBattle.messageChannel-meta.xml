@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>opponentBattle</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to pass pokemon and ability is using</description>
+    <lightningMessageFields>
+         <fieldName>damage</fieldName>
+        <description>the damage of ability</description>
+     </lightningMessageFields>
+</LightningMessageChannel>

@@ -52,8 +52,15 @@ public with sharing class pokemonClass {
         pokeId.add(team.Pokemon_2__c);
         pokeId.add(team.Pokemon_3__c);
 
-        return [SELECT Name, Pokemon_Name__c, Type__c, HP__c, Average_Damage__c, Defense__c, Pokemon_Front__c, Pokemon_Back__c
+        List<Pokemon__c> result = [SELECT Name, Battle_HP__c, Pokemon_Name__c, Type__c, HP__c, Average_Damage__c, Defense__c, Pokemon_Front__c, Pokemon_Back__c, isActive__c
         FROM Pokemon__c WHERE Id=:pokeId WITH SECURITY_ENFORCED LIMIT 3];
+
+        for(Pokemon__c poke : result){
+            poke.Battle_HP__c = poke.HP__c;
+        }
+
+        //update result;
+        return result;
     }
 
     //GET ABILITY FROM A POKEMON
@@ -61,4 +68,7 @@ public with sharing class pokemonClass {
     public static List<Ability__c> getAbilityFromPokemon(Pokemon__c pokemon){
         return [SELECT Ability_Name__c, Damage__c, MP_Cost__c FROM Ability__c WHERE Pokemon__c =:pokemon.Id LIMIT 2];
     }
+
+    
+        
 }

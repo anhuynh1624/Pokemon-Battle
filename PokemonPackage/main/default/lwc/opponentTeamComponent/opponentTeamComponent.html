@@ -1,0 +1,12 @@
+<template>
+    <template if:false={ismyteam}>
+        <p class="teamname">Opponent Team: {myteam.Name}</p>
+        
+        
+                <c-opponent-pokemon-component pokemon={pokemon1} status={status1} pokehp={HP1} onpicking={pokeHandle} ></c-opponent-pokemon-component>
+                <c-opponent-pokemon-component pokemon={pokemon2} status={status2} pokehp={HP2} onpicking={pokeHandle} ></c-opponent-pokemon-component>
+                <c-opponent-pokemon-component pokemon={pokemon3} status={status3} pokehp={HP3} onpicking={pokeHandle} ></c-opponent-pokemon-component>
+            
+                   
+    </template>
+</template>

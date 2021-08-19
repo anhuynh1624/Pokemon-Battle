@@ -5,21 +5,15 @@
             <div class="wholething">           
                 <template for:each={mypokemons.data} for:item="pokemon">
                     <lightning-layout-item key={pokemon.Id}>
-                        <c-pokemon-component pokemon={pokemon} isyourpokemon={trueValue}></c-pokemon-component>
+                        <c-pokemon-component pokemon={pokemon} currentactive={activenum} isyourpokemon={trueValue} onattack={printMe} onpicking={pickMe} onretrieve={retrieveMe} ></c-pokemon-component>
                     </lightning-layout-item>
                 </template>
             </div>
         </template>
-        
-        <template if:false={ismyteam}>
-            <p class="teamname">Opponent Team: {myteam.Name}</p>
-            <div class="wholething">
-            <template for:each={mypokemons.data} for:item="pokemon">
-                <lightning-layout-item key={pokemon.Id}>
-                    <c-pokemon-component pokemon={pokemon} isyourpokemon={falseValue}></c-pokemon-component>
-                </lightning-layout-item>
-            </template>
-            </div>            
-        </template>
+    </div>
+
+    <div class="log">
+        <p>Logs: </p>
+        {logs}
     </div>
 </template>
